@@ -4,4 +4,4 @@
 
 </script>
 
-<Design2 />
+<Design1 />

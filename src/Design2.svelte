@@ -1,29 +1,14 @@
 <script>
 
   import gsap from "gsap";
-
   import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js';
-
   import { onMount } from "svelte";
+  import horizontalScroll from "./jsContent/gsap/scrollTransition";
 
 
   onMount(()=>{
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.to("#page2 h1", {
-        transform:"translateX(-150%)",
-        scrollTrigger:{
-            trigger:"#page2",
-            scroller:"body",
-            markers:true,
-            start:"top 0%",
-            end:"top -150%",
-            scrub:2,
-            pin:true,
-        }
-
-    })
-    
+    // gsap.registerPlugin(ScrollTrigger);
+    horizontalScroll("#page2", "h1")
   })
 
 </script>
