@@ -7,7 +7,7 @@
 
 
   onMount(()=>{
-    // gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
     horizontalScroll("#page2", "h1")
   })
 
@@ -33,7 +33,7 @@
 <style>
 
   main {
-    height: 100%;
+    height: 100vh;
     width: 100%;
   }
 
@@ -58,3 +58,4 @@
   }
 
 </style> 
+

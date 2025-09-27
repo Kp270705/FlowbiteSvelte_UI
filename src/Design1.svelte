@@ -6,6 +6,10 @@
   
   import TextAnimation from "./jsContent/gsap/textFly";
 
+  import { ChevronDownOutline, UserRemoveOutline, RedditSolid, InstagramSolid, YoutubeSolid } from "flowbite-svelte-icons";
+
+  
+
 
 
   onMount(()=>{
@@ -18,7 +22,7 @@
         rotate:360,
         scrollTrigger:{
             trigger:"#page1 #box",
-            scroller:"body",
+            scroller:"#app-content-scroller",
             start:"top 40%",
             end:"top 50%",
             scrub:2,
@@ -46,7 +50,7 @@
 
 </script>
 
-<main>
+<main >
 
   <div id="page1">
     <div id="box"></div>
@@ -54,19 +58,22 @@
 
   <div id="page2">
    
-    <h1 class="text-6xl font-extrabold text-amber-400">Kunal</h1>
-    <h2 class="text-4xl font-extrabold text-blue-600">Follow me, guys!</h2>
+    <h1 class="text-6xl font-extrabold text-amber-400"><a href="https://www.linkedin.com/in/kunal-pathak-162929237/">Kunal</a></h1>
+    <h2 class="text-4xl font-extrabold text-blue-600"><a href="https://github.com/Kp270705">Follow me, guys!</a></h2>
 
   </div>
 
   <div id="page3">
 
-    <h3 class="yt text-3xl font-extrabold text-red-500">Youtube</h3>
-    <h3 class="insta text-3xl font-extrabold text-pink-500">Instagram</h3>
+    <!-- <h3 class="yt text-3xl font-extrabold text-red-500">Youtube</h3> -->
+     <YoutubeSolid class=" yt h-14 w-12 text-red-500 dark:text-red-500 shrink-0"/>
 
+    <!-- <h3 class="insta text-3xl font-extrabold text-pink-500">Instagram</h3> -->
+    <InstagramSolid class=" insta h-14 w-12 text-pink-500 dark:text-pink-500 shrink-0"/>
+    
     <!-- <h3 class="reddit text-3xl font-extrabold text-orange-600">Reddit</h3> -->
+    <RedditSolid class=" reddit h-14 w-12 text-orange-600 dark:text-orange-600 shrink-0"/>
 
-    <p class="text-3xl font-medium p-10 reddit">Reddit Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati, tempora veritatis assumenda sunt officiis ratione illum fugit molestiae praesentium esse consectetur dolorem repellat tempore rerum ducimus quis nihil veniam odio excepturi aliquam, exercitationem consequuntur tenetur minima? In neque et, doloremque atque vitae voluptatem! Voluptatibus ab assumenda, illum facilis voluptatem tenetur tempore consectetur architecto, esse nulla facere, dolorem eaque dolores veniam. Quaerat blanditiis voluptas deleniti quia impedit sint delectus voluptatum, maxime ex sed ducimus necessitatibus, nesciunt, quo ipsum asperiores nemo nisi cupiditate provident repellat eius ullam dignissimos reiciendis obcaecati deserunt. Assumenda neque quas provident fugiat vero consequatur dolorem consequuntur explicabo ipsum?</p>
   </div>
 
 </main>
@@ -74,7 +81,7 @@
 <style>
 
   main {
-    height: 100%;
+    height: 100vh;
     width: 100%;
   }
 

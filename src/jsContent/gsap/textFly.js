@@ -15,7 +15,7 @@ class TextAnimation {
       x: -1000,
       scrollTrigger: {
         trigger: `${this.attr1} ${this.attr2}`,
-        scroller: "body",
+        scroller: "#app-content-scroller",
         // markers: true,
         start: "top 60%",
         end: "top 70%",
@@ -32,7 +32,7 @@ class TextAnimation {
       x: 1000,
       scrollTrigger: {
         trigger: `${this.attr1} ${this.attr2}`,
-        scroller: "body",
+        scroller: "#app-content-scroller",
         // markers: true,
         start: "top 60%",
         end: "top 70%",
@@ -49,7 +49,7 @@ textSlideDown(){
         y:-500,
         scrollTrigger:{
             trigger:`${this.attr1} ${this.attr2}`,
-            scroller:"body",
+            scroller:"#app-content-scroller",
             // markers:true,
             start:"top 90%",
             end: "top 10%",

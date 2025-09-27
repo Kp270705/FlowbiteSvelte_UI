@@ -24,6 +24,7 @@
     ]
   },
   "dependencies": {
-    "gsap": "^3.13.0"
+    "gsap": "^3.13.0",
+    "svelte-spa-router": "^4.0.1"
   }
 }
