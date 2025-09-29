@@ -13,6 +13,7 @@
     { name: "Design1", path: "/design1" },
     { name: "Design2", path: "/design2" },
     { name: "Design3", path: "/design3" },
+    { name: "Design4", path: "/design4" },
   ];
   
 </script>

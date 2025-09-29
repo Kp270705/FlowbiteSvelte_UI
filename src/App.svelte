@@ -4,7 +4,8 @@
   import Design1 from "./Design1.svelte";
   import Design2 from "./Design2.svelte";
   import Design3 from "./Design3.svelte";
+  import Fanta from "./Fanta.svelte";
 
 </script>
 
-<Navigation />
+<Fanta />

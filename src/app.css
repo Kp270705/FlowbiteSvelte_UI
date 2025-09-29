@@ -33,12 +33,21 @@
 @source "../node_modules/flowbite-svelte-icons/dist";
 
 
+@font-face {
+  font-family: Product sans;
+  src: url(productsans/ProductSans-Regular.ttf);
+}
+@font-face {
+  font-family: Product sans B;
+  src: url(productsans/ProductSans-Bold.ttf);
+}
+
 html, body, #app{
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
-  /* overflow-x: hidden;  */
+  font-family: Product sans;
 }
 body {
   overflow-x: hidden; 
