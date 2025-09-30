@@ -11,7 +11,7 @@ class animateFanta{
         start:"0% 95%",
         end:"70% 50%",
         scrub:true,
-        markers:true,
+        // markers:true,
     }})
     
     tl.to(this.attr1.fanta,{
@@ -46,7 +46,7 @@ class animateFanta{
         start:"0% 95%",
         end:"50% 50%",
         scrub:true,
-        markers:true,
+        // markers:true,
     }})
 
     tl2.to(this.attr1.fanta,{
