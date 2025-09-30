@@ -42,6 +42,10 @@
   src: url(productsans/ProductSans-Bold.ttf);
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 html, body, #app{
   height: 100%;
   width: 100%;

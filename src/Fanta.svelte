@@ -1,14 +1,42 @@
 <script>
+    import animateFanta from "./jsContent/gsap/fanta";
     import { RectangleListSolid } from "flowbite-svelte-icons";
+    import gsap from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    // file imports:
     // import Fanta from "./assets/icons/fanta1.png"
     import Fanta from "./assets/icons/f3.png"
     import coc from "./assets/icons/coc.png"
     import pepsi from "./assets/icons/pepsi.png"
     import OrangeSlice from "./assets/icons/orngslc.png"
     import Orange from "./assets/icons/orange1.png"
+    import lemon from "./assets/icons/lemon.webp"
     import leaf1 from "./assets/icons/leaf1.png"
     import leaf2 from "./assets/icons/leaf2.png"
     import coconutLeaf from "./assets/icons/coconutLeaf1.png"
+    import straw from "./assets/icons/straw1.png"
+  import { onMount } from "svelte";
+
+    onMount(() =>{
+        gsap.registerPlugin(ScrollTrigger)
+
+        const identifiers = {
+            fanta:".fanta",
+            orangeSlc:".orngSlc",
+            orange:".orange",
+            leaf_1:".leaf1",
+            leaf_2:".leaf2",
+            frame2:".two",
+            frame3:".three",
+            straw:".straw",
+        }
+        const animate = new animateFanta(identifiers)
+        animate.timeLine()
+        
+    })
+
+
 </script>
 
 <div id="main">
@@ -22,44 +50,50 @@
         <RectangleListSolid class="shrink-0 h-6 w-6 text-white cursor-pointer" />
     </nav>
 
-    <div class="one">
-        <h1>FANTA</h1>
-        <img src={OrangeSlice} alt="orangeSlice" class="orngSlc ">
-        <img src={Fanta} alt="fanta" class="fanta ">
-        <img src={Orange} alt="orange" class="orange ">
-        <img src={leaf1} alt="leaf1" class="leaf1 ">
-        <img src={leaf2} alt="leaf2" class="leaf2 ">
-        <img src={coconutLeaf} alt="coconutLeaf" class="coconutLeaf ">
-    </div>
-    <div class="two">
-        <div class="two-lft">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#e04428" d="M59.7,-35.3C72.6,-12.1,75,16.3,63.3,34.1C51.6,51.8,25.8,59,0.8,58.6C-24.3,58.1,-48.5,50.1,-55.7,35C-62.8,19.8,-52.7,-2.4,-40.6,-25.2C-28.4,-48,-14.2,-71.3,4.6,-74C23.4,-76.6,46.7,-58.6,59.7,-35.3Z" transform="translate(100 100)" />
-            </svg>
+    <!-- <div class="container"> -->
+
+        <div class="one">
+            <h1>FANTA</h1>
+            <img src={OrangeSlice} alt="orangeSlice" class="orngSlc ">
+            <img src={Fanta} alt="fanta" class="fanta ">
+            <img src={Orange} alt="orange" class="orange ">
+            <img src={leaf1} alt="leaf1" class="leaf1 ">
+            <img src={leaf2} alt="leaf2" class="leaf2 ">
+            <img src={coconutLeaf} alt="coconutLeaf" class="coconutLeaf ">
         </div>
-        <div class="two-rght">
-            <h1 class=" ">Flavour change</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolore placeat nulla similique quasi tempora nostrum vero fuga! Beatae recusandae nemo soluta iure optio ratione veniam tenetur non voluptatem at aperiam ducimus magnam accusamus, quibusdam sapiente nihil eius fuga accusantium minima neque unde. Necessitatibus doloremque cum culpa a laborum vitae illo at ducimus voluptate, praesentium sequi facilis soluta illum, accusamus repellat nulla maiores ut totam perspiciatis. Explicabo sint saepe distinctio numquam hic nihil earum, libero quaerat ut autem dolorum voluptas tempora impedit obcaecati possimus esse veniam aliquid nemo doloribus. Modi hic quas nesciunt quod perferendis esse? Recusandae repudiandae tenetur incidunt.</p>
-            
+        <div class="two">
+            <div class="two-lft">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#e04428" d="M59.7,-35.3C72.6,-12.1,75,16.3,63.3,34.1C51.6,51.8,25.8,59,0.8,58.6C-24.3,58.1,-48.5,50.1,-55.7,35C-62.8,19.8,-52.7,-2.4,-40.6,-25.2C-28.4,-48,-14.2,-71.3,4.6,-74C23.4,-76.6,46.7,-58.6,59.7,-35.3Z" transform="translate(100 100)" />
+                </svg>
+            </div>
+            <div class="two-rght">
+                <h1 class=" ">Flavour change</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolore placeat nulla similique quasi tempora nostrum vero fuga! Beatae recusandae nemo soluta iure optio ratione veniam tenetur non voluptatem at aperiam ducimus magnam accusamus, quibusdam sapiente nihil eius fuga accusantium minima neque unde. Necessitatibus doloremque cum culpa a laborum vitae illo at ducimus voluptate, praesentium sequi facilis soluta illum, accusamus repellat nulla maiores ut totam perspiciatis. Explicabo sint saepe distinctio numquam hic nihil earum, libero quaerat ut autem dolorum voluptas tempora impedit obcaecati possimus esse veniam aliquid nemo doloribus. Modi hic quas nesciunt quod perferendis esse? Recusandae repudiandae tenetur incidunt.</p>
+                
+            </div>
         </div>
-    </div>
-    <div class="three">
-        <div class="card ">
-            <img src={coc} alt="coc-three" class="coc-three" >
-            <h1>Coc</h1>
-            <button class="btn" >Buy now</button>
+        <div class="three">
+            <div class="card ">
+                <img src={lemon} alt="lemon" class="lemon" >
+                <img src={coc} alt="coc-three" class="coc-three" >
+                <h1>Coc</h1>
+                <button class="btn" >Buy now</button>
+            </div>
+            <div class="card ">
+                <h1>Fanta</h1>
+                <button class="btn" >Buy now</button>
+                <img src={straw} alt="straw" class="straw">
+            </div>
+            <div class="card ">
+                <img src={lemon} alt="lemon" class="lemon" >
+                <img src={pepsi} alt="pepsi" class="pepsi-three">
+                <h1>Pepsi</h1>
+                <button class="btn" >Buy now</button>
+            </div>
         </div>
-        <div class="card ">
-            <!-- <img src={Fanta} alt="fanta" class="fanta-three"> -->
-            <h1>Fanta</h1>
-            <button class="btn" >Buy now</button>
-        </div>
-        <div class="card ">
-            <img src={pepsi} alt="pepsi" class="pepsi-three">
-            <h1>Pepsi</h1>
-            <button class="btn" >Buy now</button>
-        </div>
-    </div>
+
+    <!-- </div> -->
 </div>
 
 <style>
@@ -71,10 +105,10 @@
     }
 
     #main{
-    width: 100%;
-    height: 100vh;
-    background-color: orangered;
-}
+        width: 100%;
+        height: 100vh;
+        background-color: orangered;
+    }
 
     nav{ 
         position: fixed; 
@@ -94,7 +128,6 @@
     .centrNav {
         display: flex;
         gap: 3vw;
-        /* font-size: large; */
     }
 
     .one {
@@ -110,6 +143,7 @@
         position: absolute;
         width: 40%;
         z-index: 2;
+        transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
     }
     .orngSlc{
         position: absolute;
@@ -117,6 +151,7 @@
         left: 32%;
         width: 15%;
         z-index: 1;
+        transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
     }
     .orange{
         position: absolute;
@@ -124,6 +159,7 @@
         z-index: 3;
         top: 55%;
         right: 30%;
+        transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
 
     }
     .one h1{
@@ -144,6 +180,7 @@
         left: 0%;
         transform: rotate(95deg);
         position: absolute;
+        transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
     }
 
     .leaf2{
@@ -153,6 +190,7 @@
         width: 20%;
         height: 25%;
         position: absolute;
+        transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
     }
     .coconutLeaf{
         top: 10%;
@@ -191,7 +229,7 @@
     }
 
     .three{
-        position: relative;
+        /* position: relative; */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -201,6 +239,7 @@
         background: linear-gradient(150deg, rgb(255, 132, 0), rgb(255, 106, 0), rgb(255, 119, 0));
     }
     .card{
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -210,7 +249,7 @@
         height: 70vh;
         width: 25vw;
         border-radius: 20px;
-        margin-top: 10vh;
+        margin-top: 25vh;
     }
     .card h1{
         font-size: 5vw;
@@ -225,14 +264,37 @@
     }
     .coc-three{
         position: absolute;
-        width: 15%;
-        top: 15%;
+        width: 65%;
+        top: -10%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+
     }
     .pepsi-three{
         position: absolute;
-        width: 18%;
-        top: 15%;
+        width: 70%;
+        height: 70%;
+        top: -13%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+    }
+    .lemon{
+        position: absolute;
+        top: -32%;
+        width: 85%;
+        transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+    }
+    .straw{
+        position: absolute;
+        top: -15%;
+        left: 52%;
+        rotate: -30deg;
+        z-index: 1;
+        
     }
 
 
 </style>
+
